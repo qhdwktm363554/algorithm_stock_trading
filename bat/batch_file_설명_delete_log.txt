@@ -1,0 +1,18 @@
+forfiles /P "%~dp0..\log" /S /M *.log* /D -3 /C "cmd /c del @file"
+timeout 5
+
+
+
+forfiles 참고링크: https://docs.microsoft.com/ko-kr/windows-server/administration/windows-commands/forfiles
+이제 위 code에 대해서 설명을 해보자 
+forfiles: file 또는 file 집합에서 명령을 선택하고 실행합니다. 이 명령은 batch file에서 가장 일반적으로 사용됩니다. 
+각각의 매개변수에 대해서 아래 설명
+/P	#검색을 시작하는 경로
+ "%~dp0		
+..	#한단계 위의 경로
+\log 	#그 아래에 있는 log directory
+" /S	#하위 directory에서 검색을 해서
+ /M	# 찾을거다
+ *.log*	# .log가 들어있는 파일을	
+ /D -3	# 3일이 지난 파일을 찾을거다. 
+ /C "cmd /c del @file"	# 그래서 그걸 지울거다
