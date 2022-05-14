@@ -13,4 +13,5 @@
 - data collection:
     - collector_v3.py
     - naver_crawling_3.py (built by Bonghyun Kim)
-    - naver_crawling_per.py (build by Bonghyun Kim)
+    - naver_crawling_per.py (built by Bonghyun Kim)
+    - 00_bong_plot.py (built by Bonghyun Kim)
