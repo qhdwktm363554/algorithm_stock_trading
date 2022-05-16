@@ -20,7 +20,7 @@ from email.mime.base import MIMEBase
 # https://ai-creator.tistory.com/306 여기 블로그에서 보고 그대로 복사해서 붙여 넣었다. (2021년도 12월 22일)
 def send_email(smtp_info, msg):
     with smtplib.SMTP(smtp_info["smtp_server"], smtp_info["smtp_port"]) as server:
-        # TLS 보안 연결
+        # TLS 보안 연결 - 이거 에러 걸리는데..
         server.starttls()
         # 로그인
         server.login(smtp_info["smtp_user_id"], smtp_info["smtp_user_pw"])
