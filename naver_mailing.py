@@ -68,7 +68,7 @@ from email.mime.text import MIMEText
 
 smtp_info = dict({"smtp_server" : "smtp.naver.com", # SMTP 서버 주소
                   "smtp_user_id" : "qhdwktm3635@naver.com",
-                  "smtp_user_pw" : "zxcv12",
+                  "smtp_user_pw" : "", #여기서는 password 삭제해놨는데 실제 pw 넣어야 한다. 
                   "smtp_port" : 587}) # SMTP 서버 포트
 
 import datetime
